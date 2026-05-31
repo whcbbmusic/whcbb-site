@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LIAN RAY — Concert acoustique / EPK</title>
+  <meta name="description" content="LIAN RAY — concert acoustique indie-folk / chanson. Dossier EPK, live acoustique, contact booking." />
+
+  <!-- Social preview -->
+  <meta property="og:title" content="LIAN RAY — Concert acoustique" />
+  <meta property="og:description" content="Set acoustique simple à accueillir, mais pas anonyme. EPK, live acoustique et contact booking." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="./lian-ray-press.jpg" />
+
+  <style>
+    :root {
+      --bg: #0b0b0b;
+      --paper: #f2eee7;
+      --ink: #111111;
+      --muted: #726a60;
+      --line: rgba(242, 238, 231, 0.22);
+      --card: rgba(255, 255, 255, 0.07);
+      --card-line: rgba(255, 255, 255, 0.14);
+      --accent: #d8c7aa;
+      --accent-dark: #8f7c5f;
+      --max: 1120px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(216, 199, 170, 0.16), transparent 32rem),
+        radial-gradient(circle at bottom right, rgba(255, 255, 255, 0.08), transparent 28rem),
+        var(--bg);
+      color: var(--paper);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(11, 11, 11, 0.78);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 72px;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 800;
+      line-height: 1.1;
+    }
+
+    .brand span:last-child {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      margin-top: 4px;
+      color: rgba(242, 238, 231, 0.64);
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      font-size: 0.92rem;
+      color: rgba(242, 238, 231, 0.74);
+    }
+
+    .navlinks a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .navlinks a:hover {
+      border-bottom-color: var(--accent);
+      color: var(--paper);
+    }
+
+    .hero {
+      padding: 80px 0 52px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+      gap: 46px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(242, 238, 231, 0.72);
+      font-size: 0.82rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: var(--accent);
+      display: inline-block;
+    }
+
+    h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.4rem, 8vw, 7.5rem);
+      line-height: 0.88;
+      letter-spacing: -0.075em;
+      margin: 0 0 22px;
+      max-width: 760px;
+    }
+
+    .lead {
+      font-size: clamp(1.08rem, 2vw, 1.35rem);
+      color: rgba(242, 238, 231, 0.82);
+      max-width: 680px;
+      margin: 0 0 28px;
+    }
+
+    .tagline {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 750;
+      border: 1px solid var(--card-line);
+      transition: transform 0.18s ease, background 0.18s ease, border-color 0.18s ease;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn.primary {
+      background: var(--paper);
+      color: var(--ink);
+      border-color: var(--paper);
+    }
+
+    .btn.secondary {
+      background: rgba(255,255,255,0.05);
+      color: var(--paper);
+    }
+
+    .btn.secondary:hover {
+      border-color: var(--accent);
+    }
+
+    button.btn {
+      cursor: pointer;
+      font: inherit;
+      color: inherit;
+    }
+
+    .photo-card {
+      position: relative;
+      border: 1px solid var(--card-line);
+      border-radius: 30px;
+      overflow: hidden;
+      min-height: 560px;
+      background: linear-gradient(145deg, rgba(216,199,170,0.22), rgba(255,255,255,0.04));
+      box-shadow: 0 28px 90px rgba(0,0,0,0.42);
+    }
+
+    .portrait,
+    .photo-fallback {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(1) contrast(1.12);
+    }
+
+    .photo-fallback {
+      display: none;
+      place-items: center;
+      padding: 40px;
+      text-align: center;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      color: rgba(242, 238, 231, 0.84);
+      background:
+        linear-gradient(135deg, rgba(0,0,0,0.22), rgba(0,0,0,0.66)),
+        repeating-linear-gradient(90deg, rgba(242,238,231,0.08) 0, rgba(242,238,231,0.08) 1px, transparent 1px, transparent 12px);
+    }
+
+    .photo-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 16px 18px;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.58);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(242, 238, 231, 0.86);
+      font-size: 0.94rem;
+    }
+
+    section { padding: 48px 0; }
+
+    .section-title {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      letter-spacing: -0.045em;
+      line-height: 1;
+      margin: 0 0 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--card-line);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--accent);
+    }
+
+    .card p,
+    .card li {
+      color: rgba(242, 238, 231, 0.76);
+      margin: 0;
+    }
+
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 22px;
+      align-items: start;
+    }
+
+    .video {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      border-radius: 26px;
+      overflow: hidden;
+      border: 1px solid var(--card-line);
+      background: #000;
+      box-shadow: 0 22px 70px rgba(0,0,0,0.34);
+    }
+
+    .video iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .quote {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.65rem, 3vw, 2.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      color: var(--paper);
+      margin: 0;
+    }
+
+    .tiny {
+      color: rgba(242, 238, 231, 0.58);
+      font-size: 0.92rem;
+      margin-top: 14px;
+    }
+
+    .contact-band {
+      background: var(--paper);
+      color: var(--ink);
+      border-radius: 30px;
+      padding: clamp(28px, 6vw, 56px);
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .contact-band .section-title { color: var(--ink); }
+
+    .contact-band p {
+      color: rgba(17,17,17,0.68);
+      max-width: 680px;
+    }
+
+    .contact-band .btn.primary {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .contact-band .btn.secondary {
+      color: var(--ink);
+      border-color: rgba(17,17,17,0.24);
+      background: transparent;
+    }
+
+    footer {
+      padding: 34px 0 46px;
+      color: rgba(242, 238, 231, 0.48);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 860px) {
+      .hero,
+      .split,
+      .contact-band {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        align-items: flex-start;
+        padding: 16px 0;
+      }
+
+      .navlinks {
+        display: none;
+      }
+
+      .photo-card,
+      .portrait,
+      .photo-fallback {
+        min-height: 440px;
+      }
+
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="LIAN RAY home" style="text-decoration:none;">
+        <span>LIAN RAY</span>
+        <span>WHCBB / acoustic booking</span>
+      </a>
+
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#live">Live</a>
+        <a href="#format">Format</a>
+        <a href="#epk">EPK</a>
+        <a href="mailto:whcbbmusic@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero" aria-label="LIAN RAY acoustic concert EPK">
+      <div>
+        <div class="eyebrow">Concert acoustique · Annecy / Haute-Savoie</div>
+
+        <h1>LIAN<br>RAY</h1>
+
+        <p class="lead">
+          Concert acoustique indie-folk / chanson, voix et guitare. Un format simple à accueillir,
+          intime et professionnel — <span class="tagline">pas juste un fond sonore.</span>
+        </p>
+
+        <p class="lead" style="font-size:1rem; color:rgba(242,238,231,0.68);">
+          Set solo de 35 à 45 minutes. Technique légère : une voix, une guitare, une petite PA.
+          Répertoire original, atmosphère mélancolique, directe, élégante.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="./lian-ray-epk.pdf" target="_blank" rel="noopener">Télécharger l’EPK</a>
+          <a class="btn secondary" href="https://www.youtube.com/watch?v=d06X_TTS0dM&t=107s" target="_blank" rel="noopener">Voir le live Paradiso</a>
+          <a class="btn secondary" href="mailto:whcbbmusic@gmail.com?subject=Concert%20acoustique%20LIAN%20RAY">Booking</a>
+          <button class="btn secondary" type="button" onclick="copyBookingEmail()">Copier l’email</button>
+        </div>
+      </div>
+
+      <aside class="photo-card" aria-label="LIAN RAY press photo">
+        <img
+          class="portrait"
+          src="./lian-ray-press.jpg"
+          alt="LIAN RAY press portrait"
+          onerror="this.style.display='none'; document.querySelector('.photo-fallback').style.display='grid';"
+        />
+
+        <div class="photo-fallback">LIAN<br>RAY</div>
+
+        <div class="photo-caption">
+          EPK / concert acoustique — disponible pour cafés, lieux culturels, petites salles, événements privés et formats intimistes.
+        </div>
+      </aside>
+    </section>
+
+    <section id="format">
+      <h2 class="section-title">Format proposé</h2>
+
+      <div class="grid-3">
+        <article class="card">
+          <h3>Set</h3>
+          <p>35 à 45 minutes, solo voix/guitare. Possibilité de format court apéro, showcase, ou soirée intimiste.</p>
+        </article>
+
+        <article class="card">
+          <h3>Technique</h3>
+          <ul>
+            <li>1 micro voix type SM58</li>
+            <li>1 DI guitare ou micro type SM57</li>
+            <li>Petite PA suffisante</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Esprit</h3>
+          <p>Un concert sobre, émotionnel, bookable facilement : chansons, présence, silence, tension douce.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="live" class="split">
+      <div>
+        <h2 class="section-title">Live acoustique</h2>
+        <p class="quote">Une guitare, une voix, une pièce qui écoute.</p>
+
+        <p class="tiny">
+          Extrait live acoustique enregistré au Paradiso Amsterdam. À envoyer aux programmateurs comme preuve directe du format.
+        </p>
+
+        <div class="actions">
+          <a class="btn secondary" href="https://www.youtube.com/watch?v=d06X_TTS0dM&t=107s" target="_blank" rel="noopener">Ouvrir sur YouTube</a>
+        </div>
+      </div>
+
+      <div class="video" aria-label="Embedded Paradiso live video">
+        <iframe
+          src="https://www.youtube.com/embed/d06X_TTS0dM?start=107"
+          title="LIAN RAY — live acoustique Paradiso Amsterdam"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <section id="epk">
+      <div class="contact-band">
+        <div>
+          <h2 class="section-title">EPK / Booking</h2>
+
+          <p>
+            Pour programmer LIAN RAY en concert acoustique, télécharger le dossier EPK ou écrire directement à WHCBB.
+            Format très léger, adaptable aux cafés, bars, lieux culturels, petites scènes et événements privés.
+          </p>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="mailto:whcbbmusic@gmail.com?subject=Concert%20acoustique%20LIAN%20RAY">whcbbmusic@gmail.com</a>
+          <button class="btn secondary" type="button" onclick="copyBookingEmail()">Copier l’email</button>
+          <a class="btn secondary" href="./lian-ray-epk.pdf" target="_blank" rel="noopener">EPK PDF</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      © LIAN RAY / WHCBB — Concert acoustique · Annecy / Haute-Savoie ·
+      <a href="mailto:whcbbmusic@gmail.com">whcbbmusic@gmail.com</a>
+    </div>
+  </footer>
+
+  <script>
+    function copyBookingEmail() {
+      const email = 'whcbbmusic@gmail.com';
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(() => {
+          alert('Email copié : ' + email);
+        }).catch(() => {
+          window.prompt('Copiez l’email :', email);
+        });
+      } else {
+        window.prompt('Copiez l’email :', email);
+      }
+    }
+  </script>
+</body>
+</html>
