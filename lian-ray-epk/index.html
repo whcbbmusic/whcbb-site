@@ -10,7 +10,8 @@
   <meta property="og:title" content="LIAN RAY — Concert acoustique" />
   <meta property="og:description" content="Set acoustique simple à accueillir, mais pas anonyme. EPK, live acoustique et contact booking." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="lian-ray-press.jpg" />
+  <meta property="og:url" content="https://whcbb.com/lian-ray-epk/" />
+  <meta property="og:image" content="./lian-ray-press.jpg" />
 
   <style>
     :root {
@@ -76,7 +77,6 @@
 
     .brand span:last-child {
       font-size: 0.72rem;
-      color: var(--muted);
       letter-spacing: 0.18em;
       margin-top: 4px;
       color: rgba(242, 238, 231, 0.64);
@@ -95,7 +95,10 @@
       border-bottom: 1px solid transparent;
     }
 
-    .navlinks a:hover { border-bottom-color: var(--accent); color: var(--paper); }
+    .navlinks a:hover {
+      border-bottom-color: var(--accent);
+      color: var(--paper);
+    }
 
     .hero {
       padding: 80px 0 52px;
@@ -167,9 +170,21 @@
     }
 
     .btn:hover { transform: translateY(-2px); }
-    .btn.primary { background: var(--paper); color: var(--ink); border-color: var(--paper); }
-    .btn.secondary { background: rgba(255,255,255,0.05); color: var(--paper); }
-    .btn.secondary:hover { border-color: var(--accent); }
+
+    .btn.primary {
+      background: var(--paper);
+      color: var(--ink);
+      border-color: var(--paper);
+    }
+
+    .btn.secondary {
+      background: rgba(255,255,255,0.05);
+      color: var(--paper);
+    }
+
+    .btn.secondary:hover {
+      border-color: var(--accent);
+    }
 
     button.btn {
       cursor: pointer;
@@ -321,9 +336,23 @@
     }
 
     .contact-band .section-title { color: var(--ink); }
-    .contact-band p { color: rgba(17,17,17,0.68); max-width: 680px; }
-    .contact-band .btn.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-    .contact-band .btn.secondary { color: var(--ink); border-color: rgba(17,17,17,0.24); background: transparent; }
+
+    .contact-band p {
+      color: rgba(17,17,17,0.68);
+      max-width: 680px;
+    }
+
+    .contact-band .btn.primary {
+      background: var(--ink);
+      color: var(--paper);
+      border-color: var(--ink);
+    }
+
+    .contact-band .btn.secondary {
+      color: var(--ink);
+      border-color: rgba(17,17,17,0.24);
+      background: transparent;
+    }
 
     footer {
       padding: 34px 0 46px;
@@ -367,11 +396,12 @@
         <span>LIAN RAY</span>
         <span>WHCBB / acoustic booking</span>
       </a>
+
       <nav class="navlinks" aria-label="Main navigation">
         <a href="#live">Live</a>
         <a href="#format">Format</a>
         <a href="#epk">EPK</a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=whcbbmusic@gmail.com&su=Concert%20acoustique%20LIAN%20RAY" target="_blank" rel="noopener">Contact</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=booking@whcbb.com&su=Concert%20acoustique%20LIAN%20RAY" target="_blank" rel="noopener">Contact</a>
       </nav>
     </div>
   </header>
@@ -380,27 +410,37 @@
     <section class="hero" aria-label="LIAN RAY acoustic concert EPK">
       <div>
         <div class="eyebrow">Concert acoustique · Annecy / Haute-Savoie</div>
+
         <h1>LIAN<br>RAY</h1>
+
         <p class="lead">
           Concert acoustique indie-folk / chanson, voix et guitare. Un format simple à accueillir,
           intime et professionnel — <span class="tagline">pas juste un fond sonore.</span>
         </p>
+
         <p class="lead" style="font-size:1rem; color:rgba(242,238,231,0.68);">
           Set solo de 35 à 45 minutes. Technique légère : une voix, une guitare, une petite PA.
           Répertoire original, atmosphère mélancolique, directe, élégante.
         </p>
+
         <div class="actions">
           <a class="btn primary" href="./lian-ray-epk.pdf" target="_blank" rel="noopener">Télécharger l’EPK</a>
           <a class="btn secondary" href="https://www.youtube.com/watch?v=d06X_TTS0dM&t=107s" target="_blank" rel="noopener">Voir le live Paradiso</a>
-          <a class="btn secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=whcbbmusic@gmail.com&su=Concert%20acoustique%20LIAN%20RAY" target="_blank" rel="noopener">Booking</a>
+          <a class="btn secondary" href="https://mail.google.com/mail/?view=cm&fs=1&to=booking@whcbb.com&su=Concert%20acoustique%20LIAN%20RAY" target="_blank" rel="noopener">Booking</a>
           <button class="btn secondary" type="button" onclick="copyBookingEmail()">Copier l’email</button>
         </div>
       </div>
 
       <aside class="photo-card" aria-label="LIAN RAY press photo">
-        <!-- Put your press photo in the same folder as this file and name it: lian-ray-press.jpg -->
-        <img class="portrait" src="lian-ray-press.jpg" alt="LIAN RAY press portrait" onerror="this.style.display='none'; document.querySelector('.photo-fallback').style.display='grid';" />
+        <img
+          class="portrait"
+          src="./lian-ray-press.jpg"
+          alt="LIAN RAY press portrait"
+          onerror="this.style.display='none'; document.querySelector('.photo-fallback').style.display='grid';"
+        />
+
         <div class="photo-fallback">LIAN<br>RAY</div>
+
         <div class="photo-caption">
           EPK / concert acoustique — disponible pour cafés, lieux culturels, petites salles, événements privés et formats intimistes.
         </div>
@@ -409,11 +449,13 @@
 
     <section id="format">
       <h2 class="section-title">Format proposé</h2>
+
       <div class="grid-3">
         <article class="card">
           <h3>Set</h3>
           <p>35 à 45 minutes, solo voix/guitare. Possibilité de format court apéro, showcase, ou soirée intimiste.</p>
         </article>
+
         <article class="card">
           <h3>Technique</h3>
           <ul>
@@ -422,6 +464,7 @@
             <li>Petite PA suffisante</li>
           </ul>
         </article>
+
         <article class="card">
           <h3>Esprit</h3>
           <p>Un concert sobre, émotionnel, bookable facilement : chansons, présence, silence, tension douce.</p>
@@ -433,15 +476,23 @@
       <div>
         <h2 class="section-title">Live acoustique</h2>
         <p class="quote">Une guitare, une voix, une pièce qui écoute.</p>
+
         <p class="tiny">
           Extrait live acoustique enregistré au Paradiso Amsterdam. À envoyer aux programmateurs comme preuve directe du format.
         </p>
+
         <div class="actions">
           <a class="btn secondary" href="https://www.youtube.com/watch?v=d06X_TTS0dM&t=107s" target="_blank" rel="noopener">Ouvrir sur YouTube</a>
         </div>
       </div>
+
       <div class="video" aria-label="Embedded Paradiso live video">
-        <iframe src="https://www.youtube.com/embed/d06X_TTS0dM?start=107" title="LIAN RAY — live acoustique Paradiso Amsterdam" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe
+          src="https://www.youtube.com/embed/d06X_TTS0dM?start=107"
+          title="LIAN RAY — live acoustique Paradiso Amsterdam"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
       </div>
     </section>
 
@@ -449,13 +500,15 @@
       <div class="contact-band">
         <div>
           <h2 class="section-title">EPK / Booking</h2>
+
           <p>
             Pour programmer LIAN RAY en concert acoustique, télécharger le dossier EPK ou écrire directement à WHCBB.
             Format très léger, adaptable aux cafés, bars, lieux culturels, petites scènes et événements privés.
           </p>
         </div>
+
         <div class="actions">
-          <a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=whcbbmusic@gmail.com&su=Concert%20acoustique%20LIAN%20RAY" target="_blank" rel="noopener">whcbbmusic@gmail.com</a>
+          <a class="btn primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=booking@whcbb.com&su=Concert%20acoustique%20LIAN%20RAY" target="_blank" rel="noopener">booking@whcbb.com</a>
           <button class="btn secondary" type="button" onclick="copyBookingEmail()">Copier l’email</button>
           <a class="btn secondary" href="./lian-ray-epk.pdf" target="_blank" rel="noopener">EPK PDF</a>
         </div>
@@ -465,17 +518,24 @@
 
   <footer>
     <div class="wrap">
-      © LIAN RAY / WHCBB — Concert acoustique · Annecy / Haute-Savoie · <a href="https://mail.google.com/mail/?view=cm&fs=1&to=whcbbmusic@gmail.com&su=Concert%20acoustique%20LIAN%20RAY" target="_blank" rel="noopener">whcbbmusic@gmail.com</a>
+      © LIAN RAY / WHCBB — Concert acoustique · Annecy / Haute-Savoie ·
+      <a href="https://mail.google.com/mail/?view=cm&fs=1&to=booking@whcbb.com&su=Concert%20acoustique%20LIAN%20RAY" target="_blank" rel="noopener">booking@whcbb.com</a>
     </div>
   </footer>
+
   <script>
     function copyBookingEmail() {
-      const email = 'whcbbmusic@gmail.com';
-      navigator.clipboard.writeText(email).then(() => {
-        alert('Email copié : ' + email);
-      }).catch(() => {
+      const email = 'booking@whcbb.com';
+
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(email).then(() => {
+          alert('Email copié : ' + email);
+        }).catch(() => {
+          window.prompt('Copiez l’email :', email);
+        });
+      } else {
         window.prompt('Copiez l’email :', email);
-      });
+      }
     }
   </script>
 </body>
